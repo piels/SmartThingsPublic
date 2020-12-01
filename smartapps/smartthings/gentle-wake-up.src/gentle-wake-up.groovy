@@ -217,7 +217,7 @@ def schedulingPage() {
 
 		section("Start Dimming...") {
 			input(name: "startTime", type: "time", title: "At This Time", description: null, required: false)
-			input(name: "modeStart", title: "When Entering This Mode", type: "mode", required: false, mutliple: false, submitOnChange: true, description: null)
+			input(name: "modeStart", title: "When Entering This Mode", type: "mode", required: false, multiple: false, submitOnChange: true, description: null)
 			if (modeStart) {
 				input(name: "modeStop", title: "Stop when leaving '${modeStart}' mode", type: "bool", required: false)
 			}
