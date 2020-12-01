@@ -12,13 +12,14 @@
  *
  */
 metadata {
-    definition (name: "Gentle Wake Up Controller", namespace: "smartthings", author: "SmartThings") {
+    definition (name: "Gentle Wake Up Controller", namespace: "smartthings", author: "SmartThings", vid: "9a09a8f4-aa47-3965-b504-511f05adbab8", mnmn: "9a09a8f4-aa47-3965-b504-511f05adbab8", presentationId: "9a09a8f4-aa47-3965-b504-511f05adbab8", manufacturerName: "SmartThingsCommunity") {
         capability "Switch"
         capability "Timed Session"
+        capability "autumnspring44348.completionPercentage"
 
-        attribute "percentComplete", "number"
+        //attribute "percentComplete", "number"
 
-        command "setPercentComplete", ["number"]
+        //command "setPercentComplete", ["number"]
     }
 
     simulator {
@@ -37,7 +38,7 @@ metadata {
                 attributeState "timeRemaining", label:'${currentValue} remaining'
             }
             tileAttribute("percentComplete", key: "SLIDER_CONTROL") {
-                attributeState "percentComplete", action: "timed session.setTimeRemaining"
+                attributeState "Completion Percentage.percentComplete", action: "timed session.setTimeRemaining"
             }
         }
 
